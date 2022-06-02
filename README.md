@@ -10,7 +10,7 @@ This Dockerfile requires the Docker "buildkit" to be enabled.
 
 If using Docker Desktop, this is enabled by default, otherwise it has to be explicitly enabled by some means - this can
 be set as an environment variable, passed on the command-line directly when building the image, or configured in the
-Docker daemon configuration file in '/etc/docker/daemon.json`.
+Docker daemon configuration file in `/etc/docker/daemon.json`.
 
 ### build stage
 
