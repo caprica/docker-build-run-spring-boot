@@ -82,7 +82,7 @@ docker run --rm -it -p8080:8080 test:latest
 ## Custom Maven settings.xml
 
 If you need to use a custom Maven `settings.xml` file, this should be copied to the project directory (if it should not
-be commited to the repository then it should be adding to the `.gitignore` file).
+be commited to the repository then it should be added to the `.gitignore` file).
 
 Maven must then be told to use this file:
 
