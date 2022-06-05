@@ -22,18 +22,28 @@ Docker daemon configuration file in `/etc/docker/daemon.json`:
 
 Not necessary, but to change the location where images etc are stored:
 
+```
 {
   "data-root": "/data/docker",
   "features": { "buildkit": true }
 }
+```
 
 To set custom DNS servers:
 
+```
 {
   "data-root": "/data/docker",
   "features": { "buildkit": true },
   "dns": ["8.8.8.8", "8.8.4.4"]
 }
+```
+
+After changing configuration:
+
+```
+sudo service docker restart
+```
 
 ### build stage
 
