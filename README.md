@@ -10,7 +10,30 @@ This Dockerfile requires the Docker "buildkit" to be enabled.
 
 If using Docker Desktop, this is enabled by default, otherwise it has to be explicitly enabled by some means - this can
 be set as an environment variable, passed on the command-line directly when building the image, or configured in the
-Docker daemon configuration file in `/etc/docker/daemon.json`.
+Docker daemon configuration file in `/etc/docker/daemon.json`:
+
+```
+{
+  "features": { "buildkit": true }
+}
+```
+
+### Optional Docker daemon configuration:
+
+Not necessary, but to change the location where images etc are stored:
+
+{
+  "data-root": "/data/docker",
+  "features": { "buildkit": true }
+}
+
+To set custom DNS servers:
+
+{
+  "data-root": "/data/docker",
+  "features": { "buildkit": true },
+  "dns": ["8.8.8.8", "8.8.4.4"]
+}
 
 ### build stage
 
